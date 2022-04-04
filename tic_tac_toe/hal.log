@@ -1,0 +1,1541 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld15/241/tictactoe/cds.lib -logfile hal.log worklib.tb_tic_toe_game:module.
+hal: Snapshot:  worklib.tb_tic_toe_game:module.
+hal: Workspace: /home/adld15/241/tictactoe.
+hal: Date: Mon Apr 04 19:00:33 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,MAXLEN (./game_tb.v,83|0): The HDL source line is 177 characters, which exceeds the recommended length of 80 characters.
+position_registers position_reg_unit(clock,reset,illegal_move,PC_en[8:0],PL_en[8:0],pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,MAXLEN (./game_tb.v,92|0): The HDL source line is 130 characters, which exceeds the recommended length of 80 characters.
+winner_detector win_detect_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,win,who);
+|
+halcheck: *W,MAXLEN (./game_tb.v,93|0): The HDL source line is 86 characters, which exceeds the recommended length of 80 characters.
+illegal_move_detector imd_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,PC_en[8:0],PL_en[8:0],illegal_move);
+|
+halcheck: *W,MAXLEN (./game_tb.v,96|0): The HDL source line is 112 characters, which exceeds the recommended length of 80 characters.
+nospace_detector nsd_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,no_space);
+|
+halcheck: *W,MAXLEN (./game_tb.v,97|0): The HDL source line is 81 characters, which exceeds the recommended length of 80 characters.
+fsm_controller tic_tac_toe_controller(clock,reset,play,pc,illegal_move,no_space,win,computer_play,player_play);
+|
+halcheck: *W,MAXLEN (./game_tb.v,98|0): The HDL source line is 111 characters, which exceeds the recommended length of 80 characters.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,MAXLEN (./game_tb.v,101|0): The HDL source line is 173 characters, which exceeds the recommended length of 80 characters.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,MAXLEN (./game_tb.v,251|0): The HDL source line is 120 characters, which exceeds the recommended length of 80 characters.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,MAXLEN (./game_tb.v,266|0): The HDL source line is 90 characters, which exceeds the recommended length of 80 characters.
+assign no_space =((((((((temp1 & temp2) &temp3) &temp4) &temp5) &temp6) &temp7) &temp8) &temp9);
+|
+halcheck: *W,MAXLEN (./game_tb.v,295|0): The HDL source line is 96 characters, which exceeds the recommended length of 80 characters.
+assign temp21 =((((((((temp1 & temp2) &temp3) &temp4) &temp5) &temp6) &temp7) &temp8) &temp9);
+|
+halcheck: *W,MAXLEN (./game_tb.v,326|0): The HDL source line is 94 characters, which exceeds the recommended length of 80 characters.
+assign temp22 =((((((((temp11 & temp12) &temp13) &temp14) &temp15) &temp16) &temp17) &temp18) &temp19);
+|
+halcheck: *W,MAXLEN (./game_tb.v,327|0): The HDL source line is 103 characters, which exceeds the recommended length of 80 characters.
+module tb_tic_toe_game;
+|
+halcheck: *W,DIFFMN (./game_tb.v,1|0): Module name 'tb_tic_toe_game' differs from file name 'game_tb.v'.
+module tb_tic_toe_game;
+|
+halcheck: *W,NEEDIO (./game_tb.v,1|0): Top-level module 'tb_tic_toe_game' has no inputs/outputs/inouts.
+wire [1:0] pos_led1;
+|
+halcheck: *W,NUMSUF (./game_tb.v,8|0): Identifier 'pos_led1' has a numeric value suffix.
+wire [1:0] pos_led1;
+|
+halcheck: *W,STYVAL (./game_tb.v,8|0): Numeric value '1' used for identifier 'pos_led1'. Use constants to avoid portability issues.
+wire [1:0] pos_led2;
+|
+halcheck: *W,NUMSUF (./game_tb.v,9|0): Identifier 'pos_led2' has a numeric value suffix.
+wire [1:0] pos_led2;
+|
+halcheck: *W,STYVAL (./game_tb.v,9|0): Numeric value '1' used for identifier 'pos_led2'. Use constants to avoid portability issues.
+wire [1:0] pos_led3;
+|
+halcheck: *W,NUMSUF (./game_tb.v,10|0): Identifier 'pos_led3' has a numeric value suffix.
+wire [1:0] pos_led3;
+|
+halcheck: *W,STYVAL (./game_tb.v,10|0): Numeric value '1' used for identifier 'pos_led3'. Use constants to avoid portability issues.
+wire [1:0] pos_led4;
+|
+halcheck: *W,NUMSUF (./game_tb.v,11|0): Identifier 'pos_led4' has a numeric value suffix.
+wire [1:0] pos_led4;
+|
+halcheck: *W,STYVAL (./game_tb.v,11|0): Numeric value '1' used for identifier 'pos_led4'. Use constants to avoid portability issues.
+wire [1:0] pos_led5;
+|
+halcheck: *W,NUMSUF (./game_tb.v,12|0): Identifier 'pos_led5' has a numeric value suffix.
+wire [1:0] pos_led5;
+|
+halcheck: *W,STYVAL (./game_tb.v,12|0): Numeric value '1' used for identifier 'pos_led5'. Use constants to avoid portability issues.
+wire [1:0] pos_led6;
+|
+halcheck: *W,NUMSUF (./game_tb.v,13|0): Identifier 'pos_led6' has a numeric value suffix.
+wire [1:0] pos_led6;
+|
+halcheck: *W,STYVAL (./game_tb.v,13|0): Numeric value '1' used for identifier 'pos_led6'. Use constants to avoid portability issues.
+wire [1:0] pos_led7;
+|
+halcheck: *W,NUMSUF (./game_tb.v,14|0): Identifier 'pos_led7' has a numeric value suffix.
+wire [1:0] pos_led7;
+|
+halcheck: *W,STYVAL (./game_tb.v,14|0): Numeric value '1' used for identifier 'pos_led7'. Use constants to avoid portability issues.
+wire [1:0] pos_led8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,15|0): Identifier 'pos_led8' has a numeric value suffix.
+wire [1:0] pos_led8;
+|
+halcheck: *W,STYVAL (./game_tb.v,15|0): Numeric value '1' used for identifier 'pos_led8'. Use constants to avoid portability issues.
+wire [1:0] pos_led9;
+|
+halcheck: *W,NUMSUF (./game_tb.v,16|0): Identifier 'pos_led9' has a numeric value suffix.
+wire [1:0] pos_led9;
+|
+halcheck: *W,STYVAL (./game_tb.v,16|0): Numeric value '1' used for identifier 'pos_led9'. Use constants to avoid portability issues.
+wire [1:0] who;
+|
+halcheck: *W,STYVAL (./game_tb.v,17|0): Numeric value '1' used for identifier 'who'. Use constants to avoid portability issues.
+reg [3:0] computer_position;
+|
+halcheck: *W,STYVAL (./game_tb.v,6|0): Numeric value '3' used for identifier 'computer_position'. Use constants to avoid portability issues.
+reg [3:0] player_position;
+|
+halcheck: *W,STYVAL (./game_tb.v,7|0): Numeric value '3' used for identifier 'player_position'. Use constants to avoid portability issues.
+initial begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,37|0): Each block should be labeled with a meaningful name.
+clock=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,38|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+clock=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,38|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+clock=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,38|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+forever #5 clock=~clock;
+|
+halcheck: *W,SEPLIN (./game_tb.v,39|0): Use a separate line for each HDL statement.
+initial begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,41|0): Each block should be labeled with a meaningful name.
+play=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,42|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,42|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,42|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+reset=1;
+|
+halcheck: *W,IMPDTC (./game_tb.v,43|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+reset=1;
+|
+halcheck: *W,INTTOB (./game_tb.v,43|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+reset=1;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,43|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+computer_position=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,44|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+computer_position=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,44|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+player_position=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,45|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+player_position=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,45|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,46|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,46|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,46|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+#100;
+|
+halcheck: *W,EMPSTM (./game_tb.v,47|0): Module 'tb_tic_toe_game' contains an empty statement.
+reset=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,48|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+reset=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,48|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+reset=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,48|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+#100;
+|
+halcheck: *W,EMPSTM (./game_tb.v,49|0): Module 'tb_tic_toe_game' contains an empty statement.
+play=1;
+|
+halcheck: *W,IMPDTC (./game_tb.v,50|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+play=1;
+|
+halcheck: *W,INTTOB (./game_tb.v,50|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+play=1;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,50|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,51|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,51|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,51|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+computer_position=4;
+|
+halcheck: *W,IMPDTC (./game_tb.v,52|0): Expression '4' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+computer_position=4;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,52|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+computer_position=4;
+|
+halcheck: *W,CONSBS (./game_tb.v,52|0): Base ('d, 'b, 'h, 'o) not specified for constant 4 in module/design-unit tb_tic_toe_game.
+player_position=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,53|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+player_position=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,53|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+#50;
+|
+halcheck: *W,EMPSTM (./game_tb.v,54|0): Module 'tb_tic_toe_game' contains an empty statement.
+pc=1;
+|
+halcheck: *W,IMPDTC (./game_tb.v,55|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+pc=1;
+|
+halcheck: *W,INTTOB (./game_tb.v,55|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+pc=1;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,55|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,56|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,56|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,56|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+#100;
+|
+halcheck: *W,EMPSTM (./game_tb.v,57|0): Module 'tb_tic_toe_game' contains an empty statement.
+reset=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,58|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+reset=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,58|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+reset=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,58|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+play=1;
+|
+halcheck: *W,IMPDTC (./game_tb.v,59|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+play=1;
+|
+halcheck: *W,INTTOB (./game_tb.v,59|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+play=1;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,59|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,60|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,60|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,60|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+computer_position=8;
+|
+halcheck: *W,IMPDTC (./game_tb.v,61|0): Expression '8' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+computer_position=8;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,61|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+computer_position=8;
+|
+halcheck: *W,CONSBS (./game_tb.v,61|0): Base ('d, 'b, 'h, 'o) not specified for constant 8 in module/design-unit tb_tic_toe_game.
+player_position=1;
+|
+halcheck: *W,IMPDTC (./game_tb.v,62|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+player_position=1;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,62|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+#50;
+|
+halcheck: *W,EMPSTM (./game_tb.v,63|0): Module 'tb_tic_toe_game' contains an empty statement.
+pc=1;
+|
+halcheck: *W,IMPDTC (./game_tb.v,64|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+pc=1;
+|
+halcheck: *W,INTTOB (./game_tb.v,64|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+pc=1;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,64|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,65|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,65|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,65|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+#100;
+|
+halcheck: *W,EMPSTM (./game_tb.v,66|0): Module 'tb_tic_toe_game' contains an empty statement.
+reset=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,67|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+reset=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,67|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+reset=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,67|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+play=1;
+|
+halcheck: *W,IMPDTC (./game_tb.v,68|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+play=1;
+|
+halcheck: *W,INTTOB (./game_tb.v,68|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+play=1;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,68|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,69|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,69|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,69|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+computer_position=6;
+|
+halcheck: *W,IMPDTC (./game_tb.v,70|0): Expression '6' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+computer_position=6;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,70|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+computer_position=6;
+|
+halcheck: *W,CONSBS (./game_tb.v,70|0): Base ('d, 'b, 'h, 'o) not specified for constant 6 in module/design-unit tb_tic_toe_game.
+player_position=2;
+|
+halcheck: *W,IMPDTC (./game_tb.v,71|0): Expression '2' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+player_position=2;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,71|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+player_position=2;
+|
+halcheck: *W,CONSBS (./game_tb.v,71|0): Base ('d, 'b, 'h, 'o) not specified for constant 2 in module/design-unit tb_tic_toe_game.
+#50;
+|
+halcheck: *W,EMPSTM (./game_tb.v,72|0): Module 'tb_tic_toe_game' contains an empty statement.
+pc=1;
+|
+halcheck: *W,IMPDTC (./game_tb.v,73|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+pc=1;
+|
+halcheck: *W,INTTOB (./game_tb.v,73|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+pc=1;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,73|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,74|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,74|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,74|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+#100;
+|
+halcheck: *W,EMPSTM (./game_tb.v,75|0): Module 'tb_tic_toe_game' contains an empty statement.
+reset=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,76|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+reset=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,76|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+reset=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,76|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,77|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,77|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+play=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,77|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,IMPDTC (./game_tb.v,78|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,INTTOB (./game_tb.v,78|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_tic_toe_game.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./game_tb.v,78|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_tic_toe_game.
+tic_tac_toe_game uut(
+|
+halcheck: *N,IDLENG (./game_tb.v,19|0): Identifier name 'uut' is not of appropriate length (4 to 16 characters).
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,MAXLEN (./tictactoe.v,1|0): The HDL source line is 177 characters, which exceeds the recommended length of 80 characters.
+position_registers position_reg_unit(clock,reset,illegal_move,PC_en[8:0],PL_en[8:0],pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,MAXLEN (./tictactoe.v,10|0): The HDL source line is 130 characters, which exceeds the recommended length of 80 characters.
+winner_detector win_detect_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,win,who);
+|
+halcheck: *W,MAXLEN (./tictactoe.v,11|0): The HDL source line is 86 characters, which exceeds the recommended length of 80 characters.
+illegal_move_detector imd_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,PC_en[8:0],PL_en[8:0],illegal_move);
+|
+halcheck: *W,MAXLEN (./tictactoe.v,14|0): The HDL source line is 112 characters, which exceeds the recommended length of 80 characters.
+nospace_detector nsd_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,no_space);
+|
+halcheck: *W,MAXLEN (./tictactoe.v,15|0): The HDL source line is 81 characters, which exceeds the recommended length of 80 characters.
+fsm_controller tic_tac_toe_controller(clock,reset,play,pc,illegal_move,no_space,win,computer_play,player_play);
+|
+halcheck: *W,MAXLEN (./tictactoe.v,16|0): The HDL source line is 111 characters, which exceeds the recommended length of 80 characters.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,DIFFMN (./tictactoe.v,1|0): Module name 'tic_tac_toe_game' differs from file name 'tictactoe.v'.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *N,PRTCNT (./tictactoe.v,1|0): Module/Entity 'tic_tac_toe_game' contains '16' ports.
+halcheck: (./tictactoe.v,1): Number of Input ports: 6.
+halcheck: (./tictactoe.v,1): Number of Output ports: 10.
+position_registers position_reg_unit(clock,reset,illegal_move,PC_en[8:0],PL_en[8:0],pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,CBYNAM (./tictactoe.v,10|0): Port connections for instance 'position_reg_unit' of module 'position_registers' should be made by name rather than by positional ordered list.
+winner_detector win_detect_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,win,who);
+|
+halcheck: *W,CBYNAM (./tictactoe.v,11|0): Port connections for instance 'win_detect_unit' of module 'winner_detector' should be made by name rather than by positional ordered list.
+position_decoder pd1(computer_position,computer_play,PC_en);
+|
+halcheck: *W,CBYNAM (./tictactoe.v,12|0): Port connections for instance 'pd1' of module 'position_decoder' should be made by name rather than by positional ordered list.
+position_decoder pd2(player_position,player_play,PL_en);
+|
+halcheck: *W,CBYNAM (./tictactoe.v,13|0): Port connections for instance 'pd2' of module 'position_decoder' should be made by name rather than by positional ordered list.
+illegal_move_detector imd_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,PC_en[8:0],PL_en[8:0],illegal_move);
+|
+halcheck: *W,CBYNAM (./tictactoe.v,14|0): Port connections for instance 'imd_unit' of module 'illegal_move_detector' should be made by name rather than by positional ordered list.
+nospace_detector nsd_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,no_space);
+|
+halcheck: *W,CBYNAM (./tictactoe.v,15|0): Port connections for instance 'nsd_unit' of module 'nospace_detector' should be made by name rather than by positional ordered list.
+fsm_controller tic_tac_toe_controller(clock,reset,play,pc,illegal_move,no_space,win,computer_play,player_play);
+|
+halcheck: *W,CBYNAM (./tictactoe.v,16|0): Port connections for instance 'tic_tac_toe_controller' of module 'fsm_controller' should be made by name rather than by positional ordered list.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *N,DECLIN (./tictactoe.v,1|0): Use a separate line for each HDL declaration.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,STYVAL (./tictactoe.v,1|0): Numeric value '3' used for identifier 'computer_position'. Use constants to avoid portability issues.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos1' has a numeric value suffix.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,STYVAL (./tictactoe.v,1|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos2' has a numeric value suffix.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos3' has a numeric value suffix.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos4' has a numeric value suffix.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos5' has a numeric value suffix.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos6' has a numeric value suffix.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos7' has a numeric value suffix.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos8' has a numeric value suffix.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halcheck: *W,NUMSUF (./tictactoe.v,1|0): Identifier 'pos9' has a numeric value suffix.
+output wire[1:0]who);
+|
+halcheck: *W,STYVAL (./tictactoe.v,2|0): Numeric value '1' used for identifier 'who'. Use constants to avoid portability issues.
+wire [15:0] PC_en;
+|
+halcheck: *W,LCVARN (./tictactoe.v,3|0): Net name 'PC_en' uses uppercase characters.
+wire [15:0] PC_en;
+|
+halcheck: *W,STYVAL (./tictactoe.v,3|0): Numeric value '15' used for identifier 'PC_en'. Use constants to avoid portability issues.
+wire [15:0] PL_en;
+|
+halcheck: *W,LCVARN (./tictactoe.v,4|0): Net name 'PL_en' uses uppercase characters.
+wire [15:0] PL_en;
+|
+halcheck: *W,STYVAL (./tictactoe.v,4|0): Numeric value '15' used for identifier 'PL_en'. Use constants to avoid portability issues.
+position_registers position_reg_unit(clock,reset,illegal_move,PC_en[8:0],PL_en[8:0],pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *N,IDLENG (./tictactoe.v,10|0): Identifier name 'position_reg_unit' is not of appropriate length (4 to 16 characters).
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *N,IDLENG (./game_tb.v,101|0): Identifier name 'position_registers' is not of appropriate length (4 to 16 characters).
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,DIFFMN (./game_tb.v,101|0): Module name 'position_registers' differs from file name 'game_tb.v'.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,MULTMF (./game_tb.v,101|0): More than one design-unit definition in file 'game_tb.v'.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *N,PRTCNT (./game_tb.v,101|0): Module/Entity 'position_registers' contains '14' ports.
+halcheck: (./game_tb.v,101): Number of Input ports: 5.
+halcheck: (./game_tb.v,101): Number of Output ports: 9.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *N,DECLIN (./game_tb.v,101|0): Use a separate line for each HDL declaration.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,STYVAL (./game_tb.v,101|0): Numeric value '8' used for identifier 'PC_en'. Use constants to avoid portability issues.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,STYVAL (./game_tb.v,101|0): Numeric value '8' used for identifier 'PL_en'. Use constants to avoid portability issues.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos1' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,STYVAL (./game_tb.v,101|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos2' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos3' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos4' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos5' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos6' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos7' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos8' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,NUMSUF (./game_tb.v,101|0): Identifier 'pos9' has a numeric value suffix.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,LCVARN (./game_tb.v,101|0): Net name 'PC_en' uses uppercase characters.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,LCVARN (./game_tb.v,101|0): Net name 'PL_en' uses uppercase characters.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,103|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,104|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,107|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[0]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,109|0): Missing begin/end statement in the 'if' block.
+else if(PL_en[0]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,111|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,118|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,119|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,122|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[1]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,124|0): Missing begin/end statement in the 'if' block.
+else if(PL_en[1]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,126|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,133|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,134|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,137|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[2]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,139|0): Missing begin/end statement in the 'if' block.
+else if(PL_en[2]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,141|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,148|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,149|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,152|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[3]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,154|0): Missing begin/end statement in the 'if' block.
+else if(PL_en[3]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,156|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,163|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,164|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,167|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[4]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,169|0): Missing begin/end statement in the 'if' block.
+else if(PL_en[4]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,171|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,178|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,179|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,182|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[6]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,184|0): Missing begin/end statement in the 'if' block.
+else if(PL_en[6]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,186|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,193|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,194|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,197|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[7]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,199|0): Missing begin/end statement in the 'if' block.
+else if(PL_en[7]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,201|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,208|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,209|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,212|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[8]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,214|0): Missing begin/end statement in the 'if' block.
+else if(PL_en[8]==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,216|0): Missing begin/end statement in the 'if' block.
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,USEPRT (./game_tb.v,101|0): The input/inout port 'PC_en[5]' defined in the module 'position_registers' is unused (neither read nor assigned).
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halcheck: *W,USEPRT (./game_tb.v,101|0): The input/inout port 'PL_en[5]' defined in the module 'position_registers' is unused (neither read nor assigned).
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,DIFFMN (./game_tb.v,251|0): Module name 'winner_detector' differs from file name 'game_tb.v'.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,MULTMF (./game_tb.v,251|0): More than one design-unit definition in file 'game_tb.v'.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *N,PRTCNT (./game_tb.v,251|0): Module/Entity 'winner_detector' contains '11' ports.
+halcheck: (./game_tb.v,251): Number of Input ports: 9.
+halcheck: (./game_tb.v,251): Number of Output ports: 2.
+winner_detect_3 u1(pos1,pos2,pos3,win1,who1);
+|
+halcheck: *W,CBYNAM (./game_tb.v,254|0): Port connections for instance 'u1' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u2(pos4,pos5,pos6,win2,who2);
+|
+halcheck: *W,CBYNAM (./game_tb.v,255|0): Port connections for instance 'u2' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u3(pos7,pos8,pos9,win3,who3);
+|
+halcheck: *W,CBYNAM (./game_tb.v,256|0): Port connections for instance 'u3' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u4(pos1,pos4,pos7,win4,who4);
+|
+halcheck: *W,CBYNAM (./game_tb.v,257|0): Port connections for instance 'u4' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u5(pos2,pos5,pos8,win5,who5);
+|
+halcheck: *W,CBYNAM (./game_tb.v,258|0): Port connections for instance 'u5' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u6(pos3,pos6,pos9,win6,who6);
+|
+halcheck: *W,CBYNAM (./game_tb.v,259|0): Port connections for instance 'u6' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u7(pos1,pos5,pos9,win7,who7);
+|
+halcheck: *W,CBYNAM (./game_tb.v,260|0): Port connections for instance 'u7' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u8(pos3,pos5,pos6,win8,who8);
+|
+halcheck: *W,CBYNAM (./game_tb.v,261|0): Port connections for instance 'u8' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos1' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,STYVAL (./game_tb.v,251|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos2' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *N,DECLIN (./game_tb.v,251|0): Use a separate line for each HDL declaration.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos3' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos4' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos5' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos6' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos7' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos8' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,251|0): Identifier 'pos9' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,STYVAL (./game_tb.v,251|0): Numeric value '1' used for identifier 'who'. Use constants to avoid portability issues.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,253|0): Identifier 'who1' has a numeric value suffix.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,STYVAL (./game_tb.v,253|0): Numeric value '1' used for identifier 'who1'. Use constants to avoid portability issues.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,253|0): Identifier 'who2' has a numeric value suffix.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,253|0): Identifier 'who3' has a numeric value suffix.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,253|0): Identifier 'who4' has a numeric value suffix.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,253|0): Identifier 'who5' has a numeric value suffix.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,253|0): Identifier 'who6' has a numeric value suffix.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,253|0): Identifier 'who7' has a numeric value suffix.
+wire[1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./game_tb.v,253|0): Identifier 'who8' has a numeric value suffix.
+winner_detect_3 u1(pos1,pos2,pos3,win1,who1);
+|
+halcheck: *N,IDLENG (./game_tb.v,254|0): Identifier name 'u1' is not of appropriate length (4 to 16 characters).
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,DIFFMN (./game_tb.v,266|0): Module name 'winner_detect_3' differs from file name 'game_tb.v'.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,MULTMF (./game_tb.v,266|0): More than one design-unit definition in file 'game_tb.v'.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *N,PRTCNT (./game_tb.v,266|0): Module/Entity 'winner_detect_3' contains '5' ports.
+halcheck: (./game_tb.v,266): Number of Input ports: 3.
+halcheck: (./game_tb.v,266): Number of Output ports: 2.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,266|0): Identifier 'pos0' has a numeric value suffix.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,STYVAL (./game_tb.v,266|0): Numeric value '1' used for identifier 'pos0'. Use constants to avoid portability issues.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,266|0): Identifier 'pos1' has a numeric value suffix.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *N,DECLIN (./game_tb.v,266|0): Use a separate line for each HDL declaration.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,NUMSUF (./game_tb.v,266|0): Identifier 'pos2' has a numeric value suffix.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,STYVAL (./game_tb.v,266|0): Numeric value '1' used for identifier 'who'. Use constants to avoid portability issues.
+wire [1:0]temp0,temp1,temp2;
+|
+halcheck: *W,NUMSUF (./game_tb.v,267|0): Identifier 'temp0' has a numeric value suffix.
+wire [1:0]temp0,temp1,temp2;
+|
+halcheck: *W,STYVAL (./game_tb.v,267|0): Numeric value '1' used for identifier 'temp0'. Use constants to avoid portability issues.
+wire [1:0]temp0,temp1,temp2;
+|
+halcheck: *W,NUMSUF (./game_tb.v,267|0): Identifier 'temp1' has a numeric value suffix.
+wire [1:0]temp0,temp1,temp2;
+|
+halcheck: *W,NUMSUF (./game_tb.v,267|0): Identifier 'temp2' has a numeric value suffix.
+module winner_detect_3(input [1:0] pos0,pos1,pos2,output wire winner,output wire[1:0]who);
+|
+halcheck: *W,USEPRT (./game_tb.v,266|0): The input/inout port 'pos2[0]' defined in the module 'winner_detect_3' is unused (neither read nor assigned).
+winner_detect_3 u2(pos4,pos5,pos6,win2,who2);
+|
+halcheck: *N,IDLENG (./game_tb.v,255|0): Identifier name 'u2' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u3(pos7,pos8,pos9,win3,who3);
+|
+halcheck: *N,IDLENG (./game_tb.v,256|0): Identifier name 'u3' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u4(pos1,pos4,pos7,win4,who4);
+|
+halcheck: *N,IDLENG (./game_tb.v,257|0): Identifier name 'u4' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u5(pos2,pos5,pos8,win5,who5);
+|
+halcheck: *N,IDLENG (./game_tb.v,258|0): Identifier name 'u5' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u6(pos3,pos6,pos9,win6,who6);
+|
+halcheck: *N,IDLENG (./game_tb.v,259|0): Identifier name 'u6' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u7(pos1,pos5,pos9,win7,who7);
+|
+halcheck: *N,IDLENG (./game_tb.v,260|0): Identifier name 'u7' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u8(pos3,pos5,pos6,win8,who8);
+|
+halcheck: *N,IDLENG (./game_tb.v,261|0): Identifier name 'u8' is not of appropriate length (4 to 16 characters).
+position_decoder pd1(computer_position,computer_play,PC_en);
+|
+halcheck: *N,IDLENG (./tictactoe.v,12|0): Identifier name 'pd1' is not of appropriate length (4 to 16 characters).
+module position_decoder(input[3:0] in, input enable,output wire [15:0] out_en);
+|
+halcheck: *W,DIFFMN (./game_tb.v,224|0): Module name 'position_decoder' differs from file name 'game_tb.v'.
+module position_decoder(input[3:0] in, input enable,output wire [15:0] out_en);
+|
+halcheck: *W,MULTMF (./game_tb.v,224|0): More than one design-unit definition in file 'game_tb.v'.
+module position_decoder(input[3:0] in, input enable,output wire [15:0] out_en);
+|
+halcheck: *N,PRTCNT (./game_tb.v,224|0): Module/Entity 'position_decoder' contains '3' ports.
+halcheck: (./game_tb.v,224): Number of Input ports: 2.
+halcheck: (./game_tb.v,224): Number of Output ports: 1.
+module position_decoder(input[3:0] in, input enable,output wire [15:0] out_en);
+|
+halcheck: *W,KEYWOD (./game_tb.v,224|0): VHDL reserved word 'in' used as an identifier or label.
+module position_decoder(input[3:0] in, input enable,output wire [15:0] out_en);
+|
+halcheck: *N,DECLIN (./game_tb.v,224|0): Use a separate line for each HDL declaration.
+module position_decoder(input[3:0] in, input enable,output wire [15:0] out_en);
+|
+halcheck: *W,STYVAL (./game_tb.v,224|0): Numeric value '15' used for identifier 'out_en'. Use constants to avoid portability issues.
+ reg[15:0] temp1;
+|
+halcheck: *W,NUMSUF (./game_tb.v,225|0): Identifier 'temp1' has a numeric value suffix.
+ reg[15:0] temp1;
+|
+halcheck: *W,STYVAL (./game_tb.v,225|0): Numeric value '15' used for identifier 'temp1'. Use constants to avoid portability issues.
+ begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,228|0): Each block should be labeled with a meaningful name.
+ case(in)
+|
+halcheck: *W,CDEFCV (./game_tb.v,229|0): The case items of the case statement in module/design-unit pd1 cover all the numerical values of the case expression. The default clause is not required.
+position_decoder pd2(player_position,player_play,PL_en);
+|
+halcheck: *N,IDLENG (./tictactoe.v,13|0): Identifier name 'pd2' is not of appropriate length (4 to 16 characters).
+module illegal_move_detector(
+|
+halcheck: *N,IDLENG (./game_tb.v,298|0): Identifier name 'illegal_move_detector' is not of appropriate length (4 to 16 characters).
+module illegal_move_detector(
+|
+halcheck: *W,DIFFMN (./game_tb.v,298|0): Module name 'illegal_move_detector' differs from file name 'game_tb.v'.
+module illegal_move_detector(
+|
+halcheck: *W,MULTMF (./game_tb.v,298|0): More than one design-unit definition in file 'game_tb.v'.
+module illegal_move_detector(
+|
+halcheck: *N,PRTCNT (./game_tb.v,298|0): Module/Entity 'illegal_move_detector' contains '12' ports.
+halcheck: (./game_tb.v,298): Number of Input ports: 11.
+halcheck: (./game_tb.v,298): Number of Output ports: 1.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos1' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,STYVAL (./game_tb.v,299|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos2' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *N,DECLIN (./game_tb.v,299|0): Use a separate line for each HDL declaration.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos3' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos4' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos5' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos6' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos7' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos8' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,299|0): Identifier 'pos9' has a numeric value suffix.
+ input [8:0] PC_en, PL_en,
+|
+halcheck: *W,STYVAL (./game_tb.v,300|0): Numeric value '8' used for identifier 'PC_en'. Use constants to avoid portability issues.
+ input [8:0] PC_en, PL_en,
+|
+halcheck: *N,DECLIN (./game_tb.v,300|0): Use a separate line for each HDL declaration.
+ input [8:0] PC_en, PL_en,
+|
+halcheck: *W,LCVARN (./game_tb.v,300|0): Net name 'PC_en' uses uppercase characters.
+ input [8:0] PC_en, PL_en,
+|
+halcheck: *W,LCVARN (./game_tb.v,300|0): Net name 'PL_en' uses uppercase characters.
+ input [8:0] PC_en, PL_en,
+|
+halcheck: *W,USEPRT (./game_tb.v,300|0): The input/inout port 'PC_en' defined in the module 'illegal_move_detector' is unused (neither read nor assigned).
+module nospace_detector(
+|
+halcheck: *W,DIFFMN (./game_tb.v,281|0): Module name 'nospace_detector' differs from file name 'game_tb.v'.
+module nospace_detector(
+|
+halcheck: *W,MULTMF (./game_tb.v,281|0): More than one design-unit definition in file 'game_tb.v'.
+module nospace_detector(
+|
+halcheck: *N,PRTCNT (./game_tb.v,281|0): Module/Entity 'nospace_detector' contains '10' ports.
+halcheck: (./game_tb.v,281): Number of Input ports: 9.
+halcheck: (./game_tb.v,281): Number of Output ports: 1.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos1' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,STYVAL (./game_tb.v,282|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos2' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *N,DECLIN (./game_tb.v,282|0): Use a separate line for each HDL declaration.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos3' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos4' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos5' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos6' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos7' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos8' has a numeric value suffix.
+ input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./game_tb.v,282|0): Identifier 'pos9' has a numeric value suffix.
+fsm_controller tic_tac_toe_controller(clock,reset,play,pc,illegal_move,no_space,win,computer_play,player_play);
+|
+halcheck: *N,IDLENG (./tictactoe.v,16|0): Identifier name 'tic_tac_toe_controller' is not of appropriate length (4 to 16 characters).
+module fsm_controller(
+|
+halcheck: *W,DIFFMN (./game_tb.v,331|0): Module name 'fsm_controller' differs from file name 'game_tb.v'.
+module fsm_controller(
+|
+halcheck: *W,MULTMF (./game_tb.v,331|0): More than one design-unit definition in file 'game_tb.v'.
+module fsm_controller(
+|
+halcheck: *N,PRTCNT (./game_tb.v,331|0): Module/Entity 'fsm_controller' contains '9' ports.
+halcheck: (./game_tb.v,331): Number of Input ports: 7.
+halcheck: (./game_tb.v,331): Number of Output ports: 2.
+input reset,play,pc,illegal_move,no_space,win,
+|
+halcheck: *N,DECLIN (./game_tb.v,333|0): Use a separate line for each HDL declaration.
+output reg computer_play,player_play);
+|
+halcheck: *N,DECLIN (./game_tb.v,334|0): Use a separate line for each HDL declaration.
+reg[1:0] current_state, next_state;
+|
+halcheck: *W,STYVAL (./game_tb.v,339|0): Numeric value '1' used for identifier 'current_state'. Use constants to avoid portability issues.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,341|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./game_tb.v,342|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./game_tb.v,348|0): Each block should be labeled with a meaningful name.
+case(current_state)
+|
+halcheck: *W,CDEFCV (./game_tb.v,349|0): The case items of the case statement in module/design-unit tic_tac_toe_controller cover all the numerical values of the case expression. The default clause is not required.
+if(reset==1'b0 && play==1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,351|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b0)
+|
+halcheck: *W,NBGEND (./game_tb.v,361|0): Missing begin/end statement in the 'if' block.
+else if(no_space == 1 || win== 1'b1)
+|
+halcheck: *W,ULCMPE (./game_tb.v,377|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit tic_tac_toe_controller. LHS operand is 1 bits, RHS operand is 32 bits.
+if(reset == 1'b1)
+|
+halcheck: *W,NBGEND (./game_tb.v,386|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b0)
+|
+halcheck: *N,ALOWID (./game_tb.v,361|0): Signal/variable name 'illegal_move' does not follow the active-low naming convention : should end with '_n'.
+if(pc==1'b0) begin
+|
+halcheck: *N,ALOWID (./game_tb.v,368|0): Signal/variable name 'pc' does not follow the active-low naming convention : should end with '_n'.
+wire [15:0] PC_en;
+|
+halcheck: *W,URDWIR (./tictactoe.v,3|0): Wire 'PC_en[15:9]' defined in module 'tic_tac_toe_game' does not drive any object, but is assigned at least once.
+wire [15:0] PL_en;
+|
+halcheck: *W,URDWIR (./tictactoe.v,4|0): Wire 'PL_en[15:9]' defined in module 'tic_tac_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led1;
+|
+halcheck: *W,URDWIR (./game_tb.v,8|0): Wire 'pos_led1' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led2;
+|
+halcheck: *W,URDWIR (./game_tb.v,9|0): Wire 'pos_led2' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led3;
+|
+halcheck: *W,URDWIR (./game_tb.v,10|0): Wire 'pos_led3' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led4;
+|
+halcheck: *W,URDWIR (./game_tb.v,11|0): Wire 'pos_led4' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led5;
+|
+halcheck: *W,URDWIR (./game_tb.v,12|0): Wire 'pos_led5' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led6;
+|
+halcheck: *W,URDWIR (./game_tb.v,13|0): Wire 'pos_led6' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led7;
+|
+halcheck: *W,URDWIR (./game_tb.v,14|0): Wire 'pos_led7' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led8;
+|
+halcheck: *W,URDWIR (./game_tb.v,15|0): Wire 'pos_led8' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led9;
+|
+halcheck: *W,URDWIR (./game_tb.v,16|0): Wire 'pos_led9' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+wire [1:0] who;
+|
+halcheck: *W,URDWIR (./game_tb.v,17|0): Wire 'who' defined in module 'tb_tic_toe_game' does not drive any object, but is assigned at least once.
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 321.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+module  position_registers(input clock, input reset, input illegal_move, input [8:0] PC_en, input [8:0] PL_en, output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halsynth: *W,UNDRIV (./game_tb.v,101|0): Primary output/inout 'pos6'  is not driven in the module 'position_registers'.
+ always @(*)
+|
+halsynth: *W,NBCOMB (./game_tb.v,227|0): Non-blocking assignment encountered in a combinational block.
+ 4'd0: temp1 <= 16'b00000000000000001;
+|
+halsynth: (./game_tb.v,230|0): Source HDL information for the error/warning mentioned above.
+ 4'd1: temp1 <= 16'b00000000000000010;
+|
+halsynth: (./game_tb.v,231|0): Source HDL information for the error/warning mentioned above.
+ 4'd2: temp1 <= 16'b00000000000000100;
+|
+halsynth: (./game_tb.v,232|0): Source HDL information for the error/warning mentioned above.
+ 4'd3: temp1 <= 16'b00000000000001000;
+|
+halsynth: (./game_tb.v,233|0): Source HDL information for the error/warning mentioned above.
+ 4'd4: temp1 <= 16'b00000000000010000;
+|
+halsynth: (./game_tb.v,234|0): Source HDL information for the error/warning mentioned above.
+ 4'd5: temp1 <= 16'b00000000000100000;
+|
+halsynth: (./game_tb.v,235|0): Source HDL information for the error/warning mentioned above.
+ 4'd6: temp1 <= 16'b00000000001000000;
+|
+halsynth: (./game_tb.v,236|0): Source HDL information for the error/warning mentioned above.
+ 4'd7: temp1 <= 16'b00000000010000000;
+|
+halsynth: (./game_tb.v,237|0): Source HDL information for the error/warning mentioned above.
+ 4'd8: temp1 <= 16'b00000000100000000;
+|
+halsynth: (./game_tb.v,238|0): Source HDL information for the error/warning mentioned above.
+ 4'd9: temp1 <= 16'b00000001000000000;
+|
+halsynth: (./game_tb.v,239|0): Source HDL information for the error/warning mentioned above.
+ 4'd10: temp1 <= 16'b00000100000000000;
+|
+halsynth: (./game_tb.v,240|0): Source HDL information for the error/warning mentioned above.
+ 4'd11: temp1 <= 16'b00001000000000000;
+|
+halsynth: (./game_tb.v,241|0): Source HDL information for the error/warning mentioned above.
+ 4'd12: temp1 <= 16'b00010000000000000;
+|
+halsynth: (./game_tb.v,242|0): Source HDL information for the error/warning mentioned above.
+ 4'd13: temp1 <= 16'b00100000000000000;
+|
+halsynth: (./game_tb.v,243|0): Source HDL information for the error/warning mentioned above.
+ 4'd14: temp1 <= 16'b01000000000000000;
+|
+halsynth: (./game_tb.v,244|0): Source HDL information for the error/warning mentioned above.
+ 4'd15: temp1 <= 16'b10000000000000001;
+|
+halsynth: (./game_tb.v,245|0): Source HDL information for the error/warning mentioned above.
+always@(*)
+|
+halsynth: *W,NBCOMB (./game_tb.v,347|0): Non-blocking assignment encountered in a combinational block.
+player_play <= 1'b0;
+|
+halsynth: (./game_tb.v,355|0): Source HDL information for the error/warning mentioned above.
+player_play <= 1'b1;
+|
+halsynth: (./game_tb.v,359|0): Source HDL information for the error/warning mentioned above.
+player_play <= 1'b0;
+|
+halsynth: (./game_tb.v,367|0): Source HDL information for the error/warning mentioned above.
+player_play<=1'b0;
+|
+halsynth: (./game_tb.v,384|0): Source HDL information for the error/warning mentioned above.
+current_state <= next_state;
+|
+halsynth: *N,FSMIDN (./game_tb.v,345|0): In module/design-unit 'fsm_controller', FSM for state register 'current_state' has been recognized.
+PLAYER: begin
+|
+halsynth: *W,TRNMBT (./game_tb.v,358|0): For the specified state '1', the state value changes by more than one bits on transition to state(s): 2.
+next_state <= COMPUTER;
+|
+halsynth: (./game_tb.v,362|0): Source HDL information for the error/warning mentioned above.
+GAME_DONE:begin
+|
+halsynth: *W,TRNMBT (./game_tb.v,383|0): For the specified state '3', the state value changes by more than one bits on transition to state(s): 0.
+next_state <= IDLE;
+|
+halsynth: (./game_tb.v,387|0): Source HDL information for the error/warning mentioned above.
+module fsm_controller(
+|
+halsynth: *W,EXTFSM (./game_tb.v,331|0): Extraneous logic present in module/design-unit 'fsm_controller' that encodes an FSM.
+initial begin
+|
+halsynth: *W,INIUSP (./game_tb.v,37|0): Module tb_tic_toe_game has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+initial begin
+|
+halsynth: *W,INIUSP (./game_tb.v,41|0): Module tb_tic_toe_game has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 8.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+tic_tac_toe_game uut(
+|
+halstruct: *E,UNCONI (./game_tb.v,19|0): Input port 'clock' of entity/module 'tic_tac_toe_game' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+halstruct: (./game_tb.v,19): 'clock' mapped to actual expression 'clock' which is undriven.
+tic_tac_toe_game uut(
+|
+halstruct: *E,UNCONI (./game_tb.v,19|0): Input port 'reset' of entity/module 'tic_tac_toe_game' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+halstruct: (./game_tb.v,19): 'reset' mapped to actual expression 'reset' which is undriven.
+tic_tac_toe_game uut(
+|
+halstruct: *E,UNCONI (./game_tb.v,19|0): Input port 'play' of entity/module 'tic_tac_toe_game' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+halstruct: (./game_tb.v,19): 'play' mapped to actual expression 'play' which is undriven.
+tic_tac_toe_game uut(
+|
+halstruct: *E,UNCONI (./game_tb.v,19|0): Input port 'pc' of entity/module 'tic_tac_toe_game' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+halstruct: (./game_tb.v,19): 'pc' mapped to actual expression 'pc' which is undriven.
+tic_tac_toe_game uut(
+|
+halstruct: *E,UNCONI (./game_tb.v,19|0): Input port 'computer_position' of entity/module 'tic_tac_toe_game' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+halstruct: (./game_tb.v,19): 'computer_position[3:0]' mapped to actual expression 'computer_position' which is undriven.
+tic_tac_toe_game uut(
+|
+halstruct: *E,UNCONI (./game_tb.v,19|0): Input port 'player_position' of entity/module 'tic_tac_toe_game' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+halstruct: (./game_tb.v,19): 'player_position[3:0]' mapped to actual expression 'player_position' which is undriven.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos1' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos2' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos3' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos4' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos5' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos6' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos7' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos8' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'pos9' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+tic_tac_toe_game uut(
+|
+halstruct: *W,UNCONO (./game_tb.v,19|0): Port 'who' (which is being used as an output) of entity/module 'tic_tac_toe_game' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut'.
+position_registers position_reg_unit(clock,reset,illegal_move,PC_en[8:0],PL_en[8:0],pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9);
+|
+halstruct: *W,SYNPRT (./tictactoe.v,10|0): Output port 'pos6' is assigned asynchronously.
+winner_detector win_detect_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,win,who);
+|
+halstruct: *W,SYNPRT (./tictactoe.v,11|0): Output port 'who' is assigned asynchronously.
+position_decoder pd1(computer_position,computer_play,PC_en);
+|
+halstruct: *W,UNCONO (./tictactoe.v,12|0): Port 'out_en' (which is being used as an output) of entity/module 'position_decoder' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut.pd1'.
+halstruct: (./tictactoe.v,12): 'out_en[15:9]' is not connected.
+position_decoder pd2(player_position,player_play,PL_en);
+|
+halstruct: *W,UNCONO (./tictactoe.v,13|0): Port 'out_en' (which is being used as an output) of entity/module 'position_decoder' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_tic_toe_game.uut.pd2'.
+halstruct: (./tictactoe.v,13): 'out_en[15:9]' is not connected.
+module fsm_controller(
+|
+halstruct: *W,SYNASN (./game_tb.v,331|0): The module/design-unit 'fsm_controller' contains synchronous as well as asynchronous logic.
+halstruct: (./game_tb.v,389): One instance/occurence of asynchronous logic at 'tb_tic_toe_game.uut.tic_tac_toe_controller.next_state'.
+halstruct: (./game_tb.v,345): One instance/occurence of synchronous logic at 'tb_tic_toe_game.uut.tic_tac_toe_controller.current_state'.
+pos1 <=2'b01;
+|
+halstruct: *W,ASNRST (./game_tb.v,112|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos1' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos1 <=2'b01;
+|
+halstruct: *N,FFASRT (./game_tb.v,112|0): Flip-flop 'pos1' has an asynchronous reset 'reset'.
+module tic_tac_toe_game(input clock,input reset,input play,input pc,input [3:0]computer_position,player_position,output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9, 
+|
+halstruct: *N,CLKINF (./tictactoe.v,1|0): Signal 'tb_tic_toe_game.uut.clock' was inferred as clock.
+halstruct: (./tictactoe.v,1): Clock source is signal 'tb_tic_toe_game.uut.clock'.
+halstruct: (./game_tb.v,112): Drives the flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos1'.
+pos1 <=2'b01;
+|
+halstruct: *W,ACNCPI (./game_tb.v,112|0): Asynchronous reset 'reset' of latch/flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos1' is not controllable from primary inputs.
+pos1 <=2'b01;
+|
+halstruct: *E,CBPAHI (./game_tb.v,112|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.position_reg_unit.pos1'.
+halstruct: (./game_tb.v,112): in instance 'tb_tic_toe_game.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos1'.
+halstruct: (./tictactoe.v,10): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos1 <=2'b01;
+|
+halstruct: *W,CLKNPI (./game_tb.v,112|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos1' has clock 'clock' which is not derived from primary input.
+halstruct: (./game_tb.v,2): Derived from local variable 'clock'.
+pos2 <=2'b01;
+|
+halstruct: *W,ASNRST (./game_tb.v,127|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos2' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos2 <=2'b01;
+|
+halstruct: *N,FFASRT (./game_tb.v,127|0): Flip-flop 'pos2' has an asynchronous reset 'reset'.
+pos2 <=2'b01;
+|
+halstruct: *E,CBPAHI (./game_tb.v,127|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.position_reg_unit.pos2'.
+halstruct: (./game_tb.v,127): in instance 'tb_tic_toe_game.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos2'.
+halstruct: (./tictactoe.v,10): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos3 <=2'b01;
+|
+halstruct: *W,ASNRST (./game_tb.v,142|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos3' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos3 <=2'b01;
+|
+halstruct: *N,FFASRT (./game_tb.v,142|0): Flip-flop 'pos3' has an asynchronous reset 'reset'.
+pos3 <=2'b01;
+|
+halstruct: *E,CBPAHI (./game_tb.v,142|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.position_reg_unit.pos3'.
+halstruct: (./game_tb.v,142): in instance 'tb_tic_toe_game.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos3'.
+halstruct: (./tictactoe.v,10): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos4 <=2'b01;
+|
+halstruct: *W,ASNRST (./game_tb.v,157|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos4' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos4 <=2'b01;
+|
+halstruct: *N,FFASRT (./game_tb.v,157|0): Flip-flop 'pos4' has an asynchronous reset 'reset'.
+pos4 <=2'b01;
+|
+halstruct: *E,CBPAHI (./game_tb.v,157|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.position_reg_unit.pos4'.
+halstruct: (./game_tb.v,157): in instance 'tb_tic_toe_game.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos4'.
+halstruct: (./tictactoe.v,10): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos5 <=2'b01;
+|
+halstruct: *W,ASNRST (./game_tb.v,172|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos5' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos5 <=2'b01;
+|
+halstruct: *N,FFASRT (./game_tb.v,172|0): Flip-flop 'pos5' has an asynchronous reset 'reset'.
+pos5 <=2'b01;
+|
+halstruct: *E,CBPAHI (./game_tb.v,172|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.position_reg_unit.pos5'.
+halstruct: (./game_tb.v,172): in instance 'tb_tic_toe_game.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos5'.
+halstruct: (./tictactoe.v,10): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos7 <=2'b01;
+|
+halstruct: *W,ASNRST (./game_tb.v,187|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos7' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos7 <=2'b01;
+|
+halstruct: *N,FFASRT (./game_tb.v,187|0): Flip-flop 'pos7' has an asynchronous reset 'reset'.
+pos7 <=2'b01;
+|
+halstruct: *E,CBPAHI (./game_tb.v,187|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.position_reg_unit.pos7'.
+halstruct: (./game_tb.v,187): in instance 'tb_tic_toe_game.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos7'.
+halstruct: (./tictactoe.v,10): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos8 <=2'b01;
+|
+halstruct: *W,ASNRST (./game_tb.v,202|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos8' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos8 <=2'b01;
+|
+halstruct: *N,FFASRT (./game_tb.v,202|0): Flip-flop 'pos8' has an asynchronous reset 'reset'.
+pos8 <=2'b01;
+|
+halstruct: *E,CBPAHI (./game_tb.v,202|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.position_reg_unit.pos8'.
+halstruct: (./game_tb.v,202): in instance 'tb_tic_toe_game.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos8'.
+halstruct: (./tictactoe.v,10): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos9 <=2'b01;
+|
+halstruct: *W,ASNRST (./game_tb.v,217|0): Flip-flop 'tb_tic_toe_game.uut.position_reg_unit.pos9' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos9 <=2'b01;
+|
+halstruct: *N,FFASRT (./game_tb.v,217|0): Flip-flop 'pos9' has an asynchronous reset 'reset'.
+pos9 <=2'b01;
+|
+halstruct: *E,CBPAHI (./game_tb.v,217|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.position_reg_unit.pos9'.
+halstruct: (./game_tb.v,217): in instance 'tb_tic_toe_game.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos9'.
+halstruct: (./tictactoe.v,10): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+assign winner=(((((((win1|win2)|win3)|win4)|win5)|win6)|win7)|win8);
+|
+halstruct: *W,SYNPRT (./game_tb.v,262|0): Output port 'winner' is assigned asynchronously.
+assign who=(((((((who1|who2)|who3)|who4)|who5)|who6)|who7)|who8);
+|
+halstruct: *W,SYNPRT (./game_tb.v,263|0): Output port 'who' is assigned asynchronously.
+assign winner = temp3 & temp2[1] & temp2[0];
+|
+halstruct: *W,SYNPRT (./game_tb.v,276|0): Output port 'winner' is assigned asynchronously.
+assign who[0]=winner & pos0[0];
+|
+halstruct: *W,SYNPRT (./game_tb.v,278|0): Output port 'who[0]' is assigned asynchronously.
+assign who[1]=winner & pos0[1];
+|
+halstruct: *W,SYNPRT (./game_tb.v,277|0): Output port 'who[1]' is assigned asynchronously.
+ assign out_en = (enable==1'b1)?temp1:16'd0;
+|
+halstruct: *W,SYNPRT (./game_tb.v,226|0): Output port 'out_en' is assigned asynchronously.
+assign illegal_move = temp21 | temp22;
+|
+halstruct: *W,SYNPRT (./game_tb.v,328|0): Output port 'illegal_move' is assigned asynchronously.
+assign temp11 = (pos1[1] | pos1[0]) & PL_en[0];
+|
+halstruct: *W,DALIAS (./game_tb.v,316|0): Aliased constructs found. Wires 'temp11' and 'temp1' have same drivers.
+halstruct: (./game_tb.v,306): temp1.
+assign temp12 = (pos2[1] | pos2[0]) & PL_en[1];
+|
+halstruct: *W,DALIAS (./game_tb.v,317|0): Aliased constructs found. Wires 'temp12' and 'temp2' have same drivers.
+halstruct: (./game_tb.v,307): temp2.
+assign temp13 = (pos3[1] | pos3[0]) & PL_en[2];
+|
+halstruct: *W,DALIAS (./game_tb.v,318|0): Aliased constructs found. Wires 'temp13' and 'temp3' have same drivers.
+halstruct: (./game_tb.v,308): temp3.
+assign temp14 = (pos4[1] | pos4[0]) & PL_en[3];
+|
+halstruct: *W,DALIAS (./game_tb.v,319|0): Aliased constructs found. Wires 'temp14' and 'temp4' have same drivers.
+halstruct: (./game_tb.v,309): temp4.
+assign temp15 = (pos5[1] | pos5[0]) & PL_en[4];
+|
+halstruct: *W,DALIAS (./game_tb.v,320|0): Aliased constructs found. Wires 'temp15' and 'temp5' have same drivers.
+halstruct: (./game_tb.v,310): temp5.
+assign temp16 = (pos6[1] | pos6[0]) & PL_en[5];
+|
+halstruct: *W,DALIAS (./game_tb.v,321|0): Aliased constructs found. Wires 'temp16' and 'temp6' have same drivers.
+halstruct: (./game_tb.v,311): temp6.
+assign temp17 = (pos7[1] | pos7[0]) & PL_en[6];
+|
+halstruct: *W,DALIAS (./game_tb.v,322|0): Aliased constructs found. Wires 'temp17' and 'temp7' have same drivers.
+halstruct: (./game_tb.v,312): temp7.
+assign temp18 = (pos8[1] | pos8[0]) & PL_en[7];
+|
+halstruct: *W,DALIAS (./game_tb.v,323|0): Aliased constructs found. Wires 'temp18' and 'temp8' have same drivers.
+halstruct: (./game_tb.v,313): temp8.
+assign temp19 = (pos9[1] | pos9[0]) & PL_en[8];
+|
+halstruct: *W,DALIAS (./game_tb.v,324|0): Aliased constructs found. Wires 'temp19' and 'temp9' have same drivers.
+halstruct: (./game_tb.v,314): temp9.
+assign no_space =((((((((temp1 & temp2) &temp3) &temp4) &temp5) &temp6) &temp7) &temp8) &temp9);
+|
+halstruct: *W,SYNPRT (./game_tb.v,295|0): Output port 'no_space' is assigned asynchronously.
+computer_play<=1'b0;
+|
+halstruct: *W,SYNPRT (./game_tb.v,385|0): Output port 'computer_play' is assigned asynchronously.
+player_play<=1'b0;
+|
+halstruct: *W,SYNPRT (./game_tb.v,384|0): Output port 'player_play' is assigned asynchronously.
+current_state <= next_state;
+|
+halstruct: *W,ASNRST (./game_tb.v,345|0): Flip-flop 'tb_tic_toe_game.uut.tic_tac_toe_controller.current_state' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+current_state <= next_state;
+|
+halstruct: *N,FFASRT (./game_tb.v,345|0): Flip-flop 'current_state' has an asynchronous reset 'reset'.
+current_state <= next_state;
+|
+halstruct: *W,ACNCPI (./game_tb.v,345|0): Asynchronous reset 'reset' of latch/flip-flop 'tb_tic_toe_game.uut.tic_tac_toe_controller.current_state' is not controllable from primary inputs.
+current_state <= next_state;
+|
+halstruct: *E,CBPAHI (./game_tb.v,345|0): Combinatorial path crossing multiple units drives 'tb_tic_toe_game.uut.tic_tac_toe_controller.current_state'.
+halstruct: (./game_tb.v,345): in instance 'tb_tic_toe_game.uut.tic_tac_toe_controller', 'next_state' drives 'current_state'.
+halstruct: (./game_tb.v,389): in instance 'tb_tic_toe_game.uut.tic_tac_toe_controller', combinatorial function of input 'illegal_move' drives 'next_state'.
+halstruct: (./tictactoe.v,16): in instance 'tb_tic_toe_game.uut', 'illegal_move' drives input 'illegal_move' of instance 'tic_tac_toe_controller'.
+halstruct: (./tictactoe.v,14): in instance 'tb_tic_toe_game.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./game_tb.v,328): in instance 'tb_tic_toe_game.uut.imd_unit', combinatorial function drives 'illegal_move'.
+next_state <= IDLE;
+|
+halstruct: *N,CLKINF (./game_tb.v,387|0): Signal 'tb_tic_toe_game.uut.tic_tac_toe_controller.mux(current_state)' was inferred as clock.
+halstruct: (./game_tb.v,387): Clock source is signal 'tb_tic_toe_game.uut.tic_tac_toe_controller.mux(current_state)'.
+halstruct: (./game_tb.v,389): Drives the latch 'tb_tic_toe_game.uut.tic_tac_toe_controller.next_state'.
+next_state <= GAME_DONE;
+|
+halstruct: *W,LENCPI (./game_tb.v,389|0): Enable of latch 'tb_tic_toe_game.uut.tic_tac_toe_controller.next_state' is not controllable from primary inputs.
+next_state <= GAME_DONE;
+|
+halstruct: *W,RSTDAT (./game_tb.v,389|0): Reset signal 'tb_tic_toe_game.uut.tic_tac_toe_controller.reset' drives the data pin of flip-flop 'tb_tic_toe_game.uut.tic_tac_toe_controller.next_state'.
+computer_play<=1'b0;
+|
+halstruct: *N,CLKINF (./game_tb.v,385|0): Signal 'tb_tic_toe_game.uut.tic_tac_toe_controller.mux(current_state)' was inferred as clock.
+halstruct: (./game_tb.v,385): Clock source is signal 'tb_tic_toe_game.uut.tic_tac_toe_controller.mux(current_state)'.
+halstruct: (./game_tb.v,385): Drives the latch 'tb_tic_toe_game.uut.tic_tac_toe_controller.computer_play'.
+computer_play<=1'b0;
+|
+halstruct: *W,LENCPI (./game_tb.v,385|0): Enable of latch 'tb_tic_toe_game.uut.tic_tac_toe_controller.computer_play' is not controllable from primary inputs.
+computer_play<=1'b0;
+|
+halstruct: *W,LATINF (./game_tb.v,385|0): Process/always block models a latch, or signal 'computer_play' is not assigned a value in all branches.
+next_state <= GAME_DONE;
+|
+halstruct: *W,LATINF (./game_tb.v,389|0): Process/always block models a latch, or signal 'next_state' is not assigned a value in all branches.
+module tb_tic_toe_game;
+|
+halstruct: *N,NUMDFF (./game_tb.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 18.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 15.
+halstruct: Total warnings = 51.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (15)
+  CBPAHI (9)      UNCONI (6)     
+
+ Warnings : (380)
+  ACNCPI (2)      ASNRST (9)      CBYNAM (15)     CDEFCV (2)     
+  CLKNPI (1)      CONSBS (4)      DALIAS (9)      DIFFMN (9)     
+  EMPSTM (8)      EXTFSM (1)      IMPDTC (30)     INIUSP (2)     
+  INTTOB (22)     KEYWOD (1)      LATINF (2)      LCVARN (6)     
+  LENCPI (2)      MAXLEN (18)     MULTMF (7)      NBCOMB (2)     
+  NBGEND (36)     NEEDIO (1)      NOBLKN (13)     NUMSUF (69)    
+  RSTDAT (1)      SEPLIN (1)      STYVAL (32)     SYNASN (1)     
+  SYNPRT (12)     TRNMBT (2)      TRUNCZ (30)     ULCMPE (1)     
+  UNCONO (12)     UNDRIV (1)      URDWIR (12)     USEPRT (4)     
+
+ Notes    : (49)
+  ALOWID (2)      CLKINF (3)      DECLIN (10)     FFASRT (9)     
+  FSMIDN (1)      IDLENG (15)     NUMDFF (1)      PRTCNT (8)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld15/241/tictactoe/cds.lib -sortby severity -sortby category -sortby tag hal.log
+

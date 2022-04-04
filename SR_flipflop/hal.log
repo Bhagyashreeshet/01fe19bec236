@@ -1,0 +1,233 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld15/241/srff/cds.lib -logfile hal.log worklib.srff_tb:module.
+hal: Snapshot:  worklib.srff_tb:module.
+hal: Workspace: /home/adld15/241/srff.
+hal: Date: Mon Apr 04 19:04:21 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module srff_tb();
+|
+halcheck: *W,NEEDIO (./srff_tb.v,1|0): Top-level module 'srff_tb' has no inputs/outputs/inouts.
+srff dut(s,r,clk,q,qbar);
+|
+halcheck: *W,CBYNAM (./srff_tb.v,4|0): Port connections for instance 'dut' of module 'srff' should be made by name rather than by positional ordered list.
+reg s=0,r=0,clk=0;
+|
+halcheck: *E,RTLINI (./srff_tb.v,2|0): A variable/signal 's' in an RTL description is initialized in its declaration.
+reg s=0,r=0,clk=0;
+|
+halcheck: *E,RTLINI (./srff_tb.v,2|0): A variable/signal 'r' in an RTL description is initialized in its declaration.
+reg s=0,r=0,clk=0;
+|
+halcheck: *E,RTLINI (./srff_tb.v,2|0): A variable/signal 'clk' in an RTL description is initialized in its declaration.
+initial begin
+|
+halcheck: *W,NOBLKN (./srff_tb.v,5|0): Each block should be labeled with a meaningful name.
+$monitor($time,"s=%b r=%b clk=%b q=%b qbar=%b",s,r,clk,q,qbar);
+|
+halcheck: *W,BADSYS (./srff_tb.v,6|0): System task $monitor in module 'srff_tb' is ignored.
+#10;$finish;
+|
+halcheck: *W,EMPSTM (./srff_tb.v,16|0): Module 'srff_tb' contains an empty statement.
+#10;$finish;
+|
+halcheck: *W,SEPLIN (./srff_tb.v,16|0): Use a separate line for each HDL statement.
+#10;$finish;
+|
+halcheck: *W,BADSYS (./srff_tb.v,16|0): System task $finish in module 'srff_tb' is ignored.
+always #5 clk <=~clk;
+|
+halcheck: *W,EVTRIG (./srff_tb.v,18|0): Always block with no event trigger at the start of the block in module 'srff_tb'.
+always #5 clk <=~clk;
+|
+halcheck: *W,NBGEND (./srff_tb.v,18|0): Missing begin/end statement in the 'always' block.
+always #5 clk <=~clk;
+|
+halcheck: *W,SEPLIN (./srff_tb.v,18|0): Use a separate line for each HDL statement.
+srff dut(s,r,clk,q,qbar);
+|
+halcheck: *N,IDLENG (./srff_tb.v,4|0): Identifier name 'dut' is not of appropriate length (4 to 16 characters).
+module srff(s, r, clk, q, qbar);
+|
+halcheck: *N,PRTCNT (./srff.v,1|0): Module/Entity 'srff' contains '5' ports.
+halcheck: (./srff.v,1): Number of Input ports: 3.
+halcheck: (./srff.v,1): Number of Output ports: 2.
+input s,r,clk;
+|
+halcheck: *N,DECLIN (./srff.v,2|0): Use a separate line for each HDL declaration.
+output reg q, qbar;
+|
+halcheck: *N,DECLIN (./srff.v,3|0): Use a separate line for each HDL declaration.
+begin
+|
+halcheck: *W,NOBLKN (./srff.v,5|0): Each block should be labeled with a meaningful name.
+if(s==1)
+|
+halcheck: *W,ULCMPE (./srff.v,6|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit dut. LHS operand is 1 bits, RHS operand is 32 bits.
+q<=1;
+|
+halcheck: *W,IMPDTC (./srff.v,8|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit dut.
+q<=1;
+|
+halcheck: *W,INTTOB (./srff.v,8|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit dut.
+q<=1;
+|
+halcheck: *W,TRUNCZ (./srff.v,8|0): Truncation in constant conversion without a loss of bits in module/design-unit dut.
+qbar<=0;
+|
+halcheck: *W,IMPDTC (./srff.v,9|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit dut.
+qbar<=0;
+|
+halcheck: *W,INTTOB (./srff.v,9|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit dut.
+qbar<=0;
+|
+halcheck: *W,TRUNCZ (./srff.v,9|0): Truncation in constant conversion without a loss of bits in module/design-unit dut.
+else if(r==1)
+|
+halcheck: *W,ULCMPE (./srff.v,11|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit dut. LHS operand is 1 bits, RHS operand is 32 bits.
+q<=0;
+|
+halcheck: *W,IMPDTC (./srff.v,13|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit dut.
+q<=0;
+|
+halcheck: *W,INTTOB (./srff.v,13|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit dut.
+q<=0;
+|
+halcheck: *W,TRUNCZ (./srff.v,13|0): Truncation in constant conversion without a loss of bits in module/design-unit dut.
+qbar<=1;
+|
+halcheck: *W,IMPDTC (./srff.v,14|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit dut.
+qbar<=1;
+|
+halcheck: *W,INTTOB (./srff.v,14|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit dut.
+qbar<=1;
+|
+halcheck: *W,TRUNCZ (./srff.v,14|0): Truncation in constant conversion without a loss of bits in module/design-unit dut.
+else if(s==0 & r==0)
+|
+halcheck: *W,LOGAND (./srff.v,16|0): Bit-wise AND in a conditional expression. Logical AND may have been intended.
+else if(s==0 & r==0)
+|
+halcheck: *W,ULCMPE (./srff.v,16|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit dut. LHS operand is 1 bits, RHS operand is 32 bits.
+halcheck: Total errors   = 3.
+halcheck: Total warnings = 27.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+reg s=0,r=0,clk=0;
+|
+halsynth: *W,INIUSP (./srff_tb.v,2|0): Module srff_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+initial begin
+|
+halsynth: *W,INIUSP (./srff_tb.v,5|0): Module srff_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+always #5 clk <=~clk;
+|
+halsynth: *E,AWNDEL (./srff_tb.v,18|0): Always block with no event trigger at the start in module srff_tb.
+halsynth: *W,COMBLP: In module srff_tb, combinational loop detected for node clk.
+always #5 clk <=~clk;
+|
+halsynth: (./srff_tb.v,18|0): Source HDL information for the error/warning mentioned above.
+always #5 clk <=~clk;
+|
+halsynth: *W,NBCOMB (./srff_tb.v,18|0): Non-blocking assignment encountered in a combinational block.
+always #5 clk <=~clk;
+|
+halsynth: (./srff_tb.v,18|0): Source HDL information for the error/warning mentioned above.
+always #5 clk <=~clk;
+|
+halsynth: *W,IGNDLY (./srff_tb.v,18|0): Lumped delay in module 'srff_tb' is ignored.
+halsynth: Total errors   = 1.
+halsynth: Total warnings = 5.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+reg s=0,r=0,clk=0;
+|
+halstruct: *E,CMBPAU (./srff_tb.v,2|0): Combinational loop detected through 'clk' in module/design-unit 'srff_tb'.
+halstruct: (./srff_tb.v,18): srff_tb.clk.
+srff dut(s,r,clk,q,qbar);
+|
+halstruct: *E,UNCONI (./srff_tb.v,4|0): Input port 's' of entity/module 'srff' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'srff_tb.dut'.
+halstruct: (./srff_tb.v,4): 's' mapped to actual expression 's' which is undriven.
+srff dut(s,r,clk,q,qbar);
+|
+halstruct: *E,UNCONI (./srff_tb.v,4|0): Input port 'r' of entity/module 'srff' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'srff_tb.dut'.
+halstruct: (./srff_tb.v,4): 'r' mapped to actual expression 'r' which is undriven.
+srff dut(s,r,clk,q,qbar);
+|
+halstruct: *W,UNCONO (./srff_tb.v,4|0): Port 'q' (which is being used as an output) of entity/module 'srff' is being driven inside the design, but not connected (either partially or completely) in its instance 'srff_tb.dut'.
+srff dut(s,r,clk,q,qbar);
+|
+halstruct: *W,UNCONO (./srff_tb.v,4|0): Port 'qbar' (which is being used as an output) of entity/module 'srff' is being driven inside the design, but not connected (either partially or completely) in its instance 'srff_tb.dut'.
+q<=0;
+|
+halstruct: *W,FFWASR (./srff.v,13|0): Flip-flop 'q' does not have any asynchronous set or reset.
+reg s=0,r=0,clk=0;
+|
+halstruct: *N,CLKINF (./srff_tb.v,2|0): Signal 'srff_tb.clk' was inferred as clock.
+halstruct: (./srff_tb.v,2): Clock source is signal 'srff_tb.clk'.
+halstruct: (./srff.v,13): Drives the flip-flop 'srff_tb.dut.q'.
+q<=0;
+|
+halstruct: *W,CLKNPI (./srff.v,13|0): Flip-flop 'srff_tb.dut.q' has clock 'clk' which is not derived from primary input.
+halstruct: (./srff_tb.v,18): Derived from local variable 'clk'.
+q<=0;
+|
+halstruct: *W,NEGCLK (./srff.v,13|0): Clock signal 'srff_tb.clk' of flip-flop 'srff_tb.dut.q' is derived from an inverter.
+qbar<=1;
+|
+halstruct: *W,FFWASR (./srff.v,14|0): Flip-flop 'qbar' does not have any asynchronous set or reset.
+qbar<=1;
+|
+halstruct: *W,NEGCLK (./srff.v,14|0): Clock signal 'srff_tb.clk' of flip-flop 'srff_tb.dut.qbar' is derived from an inverter.
+module srff_tb();
+|
+halstruct: *W,ATLGLC (./srff_tb.v,1|0): Glue logic inferred in top-level module/design-unit 'srff_tb'.
+halstruct: (./srff_tb.v,18): HDL-statement inferred as glue logic.
+module srff_tb();
+|
+halstruct: *N,NUMDFF (./srff_tb.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 2.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 3.
+halstruct: Total warnings = 8.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (7)
+  AWNDEL (1)      CMBPAU (1)      RTLINI (3)      UNCONI (2)     
+
+ Warnings : (40)
+  ATLGLC (1)      BADSYS (2)      CBYNAM (1)      CLKNPI (1)     
+  COMBLP (1)      EMPSTM (1)      EVTRIG (1)      FFWASR (2)     
+  IGNDLY (1)      IMPDTC (4)      INIUSP (2)      INTTOB (4)     
+  LOGAND (1)      NBCOMB (1)      NBGEND (1)      NEEDIO (1)     
+  NEGCLK (2)      NOBLKN (2)      SEPLIN (2)      TRUNCZ (4)     
+  ULCMPE (3)      UNCONO (2)     
+
+ Notes    : (6)
+  CLKINF (1)      DECLIN (2)      IDLENG (1)      NUMDFF (1)     
+  PRTCNT (1)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld15/241/srff/cds.lib -sortby severity -sortby category -sortby tag hal.log
+
