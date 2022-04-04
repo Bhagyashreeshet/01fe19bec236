@@ -1,0 +1,194 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld15/241/jkff/cds.lib -logfile hal.log worklib.jkff_tb:module.
+hal: Snapshot:  worklib.jkff_tb:module.
+hal: Workspace: /home/adld15/241/jkff.
+hal: Date: Mon Apr 04 17:13:58 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module jkff_tb();
+|
+halcheck: *W,NEEDIO (./jkff_tb.v,1|0): Top-level module 'jkff_tb' has no inputs/outputs/inouts.
+jkff dut(reset, clk,j,k,q,qnot);
+|
+halcheck: *W,CBYNAM (./jkff_tb.v,7|0): Port connections for instance 'dut' of module 'jkff' should be made by name rather than by positional ordered list.
+reg clk=0;
+|
+halcheck: *E,RTLINI (./jkff_tb.v,2|0): A variable/signal 'clk' in an RTL description is initialized in its declaration.
+reg j=0;
+|
+halcheck: *E,RTLINI (./jkff_tb.v,3|0): A variable/signal 'j' in an RTL description is initialized in its declaration.
+reg k=0;
+|
+halcheck: *E,RTLINI (./jkff_tb.v,4|0): A variable/signal 'k' in an RTL description is initialized in its declaration.
+reg reset=1;
+|
+halcheck: *E,RTLINI (./jkff_tb.v,5|0): A variable/signal 'reset' in an RTL description is initialized in its declaration.
+initial begin
+|
+halcheck: *W,NOBLKN (./jkff_tb.v,8|0): Each block should be labeled with a meaningful name.
+$monitor($time,"j=%b k=%b q=%b qnot=%b",j,k,q,qnot);
+|
+halcheck: *W,BADSYS (./jkff_tb.v,9|0): System task $monitor in module 'jkff_tb' is ignored.
+#25 $finish;
+|
+halcheck: *W,BADSYS (./jkff_tb.v,13|0): System task $finish in module 'jkff_tb' is ignored.
+always #1 clk=~clk;
+|
+halcheck: *W,EVTRIG (./jkff_tb.v,15|0): Always block with no event trigger at the start of the block in module 'jkff_tb'.
+always #1 clk=~clk;
+|
+halcheck: *W,NBGEND (./jkff_tb.v,15|0): Missing begin/end statement in the 'always' block.
+always #1 clk=~clk;
+|
+halcheck: *W,SEPLIN (./jkff_tb.v,15|0): Use a separate line for each HDL statement.
+always #1 clk=~clk;
+|
+halcheck: *W,RDBFAS (./jkff_tb.v,15|0): Register 'clk', assigned using blocking assignment, is being read before getting assigned.
+jkff dut(reset, clk,j,k,q,qnot);
+|
+halcheck: *N,IDLENG (./jkff_tb.v,7|0): Identifier name 'dut' is not of appropriate length (4 to 16 characters).
+module jkff(input reset,input clk,input j,input k,output reg q,output qnot);
+|
+halcheck: *W,DIFFMN (./jkff_tb.v,18|0): Module name 'jkff' differs from file name 'jkff_tb.v'.
+module jkff(input reset,input clk,input j,input k,output reg q,output qnot);
+|
+halcheck: *W,MULTMF (./jkff_tb.v,18|0): More than one design-unit definition in file 'jkff_tb.v'.
+module jkff(input reset,input clk,input j,input k,output reg q,output qnot);
+|
+halcheck: *N,PRTCNT (./jkff_tb.v,18|0): Module/Entity 'jkff' contains '6' ports.
+halcheck: (./jkff_tb.v,18): Number of Input ports: 4.
+halcheck: (./jkff_tb.v,18): Number of Output ports: 2.
+module jkff(input reset,input clk,input j,input k,output reg q,output qnot);
+|
+halcheck: *N,DECLIN (./jkff_tb.v,18|0): Use a separate line for each HDL declaration.
+always @(posedge clk)
+|
+halcheck: *W,NBGEND (./jkff_tb.v,20|0): Missing begin/end statement in the 'always' block.
+  if(reset) q<=1'b0; else
+|
+halcheck: *W,NBGEND (./jkff_tb.v,21|0): Missing begin/end statement in the 'if' block.
+  if(reset) q<=1'b0; else
+|
+halcheck: *W,SEPLIN (./jkff_tb.v,21|0): Use a separate line for each HDL statement.
+halcheck: Total errors   = 4.
+halcheck: Total warnings = 14.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+reg clk=0;
+|
+halsynth: *W,INIUSP (./jkff_tb.v,2|0): Module jkff_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+reg j=0;
+|
+halsynth: *W,INIUSP (./jkff_tb.v,3|0): Module jkff_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+reg k=0;
+|
+halsynth: *W,INIUSP (./jkff_tb.v,4|0): Module jkff_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+reg reset=1;
+|
+halsynth: *W,INIUSP (./jkff_tb.v,5|0): Module jkff_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+initial begin
+|
+halsynth: *W,INIUSP (./jkff_tb.v,8|0): Module jkff_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+always #1 clk=~clk;
+|
+halsynth: *E,AWNDEL (./jkff_tb.v,15|0): Always block with no event trigger at the start in module jkff_tb.
+halsynth: *W,COMBLP: In module jkff_tb, combinational loop detected for node clk.
+always #1 clk=~clk;
+|
+halsynth: (./jkff_tb.v,15|0): Source HDL information for the error/warning mentioned above.
+always #1 clk=~clk;
+|
+halsynth: *W,IGNDLY (./jkff_tb.v,15|0): Lumped delay in module 'jkff_tb' is ignored.
+halsynth: Total errors   = 1.
+halsynth: Total warnings = 7.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+reg clk=0;
+|
+halstruct: *E,CMBPAU (./jkff_tb.v,2|0): Combinational loop detected through 'clk' in module/design-unit 'jkff_tb'.
+halstruct: (./jkff_tb.v,15): jkff_tb.clk.
+jkff dut(reset, clk,j,k,q,qnot);
+|
+halstruct: *E,UNCONI (./jkff_tb.v,7|0): Input port 'reset' of entity/module 'jkff' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'jkff_tb.dut'.
+halstruct: (./jkff_tb.v,7): 'reset' mapped to actual expression 'reset' which is undriven.
+jkff dut(reset, clk,j,k,q,qnot);
+|
+halstruct: *E,UNCONI (./jkff_tb.v,7|0): Input port 'j' of entity/module 'jkff' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'jkff_tb.dut'.
+halstruct: (./jkff_tb.v,7): 'j' mapped to actual expression 'j' which is undriven.
+jkff dut(reset, clk,j,k,q,qnot);
+|
+halstruct: *E,UNCONI (./jkff_tb.v,7|0): Input port 'k' of entity/module 'jkff' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'jkff_tb.dut'.
+halstruct: (./jkff_tb.v,7): 'k' mapped to actual expression 'k' which is undriven.
+jkff dut(reset, clk,j,k,q,qnot);
+|
+halstruct: *W,UNCONO (./jkff_tb.v,7|0): Port 'q' (which is being used as an output) of entity/module 'jkff' is being driven inside the design, but not connected (either partially or completely) in its instance 'jkff_tb.dut'.
+jkff dut(reset, clk,j,k,q,qnot);
+|
+halstruct: *W,UNCONO (./jkff_tb.v,7|0): Port 'qnot' (which is being used as an output) of entity/module 'jkff' is being driven inside the design, but not connected (either partially or completely) in its instance 'jkff_tb.dut'.
+2'b11: q<=~q;
+|
+halstruct: *W,FFWASR (./jkff_tb.v,26|0): Flip-flop 'q' does not have any asynchronous set or reset.
+reg clk=0;
+|
+halstruct: *N,CLKINF (./jkff_tb.v,2|0): Signal 'jkff_tb.clk' was inferred as clock.
+halstruct: (./jkff_tb.v,2): Clock source is signal 'jkff_tb.clk'.
+halstruct: (./jkff_tb.v,26): Drives the flip-flop 'jkff_tb.dut.q'.
+2'b11: q<=~q;
+|
+halstruct: *W,CLKNPI (./jkff_tb.v,26|0): Flip-flop 'jkff_tb.dut.q' has clock 'clk' which is not derived from primary input.
+halstruct: (./jkff_tb.v,15): Derived from local variable 'clk'.
+2'b11: q<=~q;
+|
+halstruct: *W,NEGCLK (./jkff_tb.v,26|0): Clock signal 'jkff_tb.clk' of flip-flop 'jkff_tb.dut.q' is derived from an inverter.
+module jkff_tb();
+|
+halstruct: *W,ATLGLC (./jkff_tb.v,1|0): Glue logic inferred in top-level module/design-unit 'jkff_tb'.
+halstruct: (./jkff_tb.v,15): HDL-statement inferred as glue logic.
+module jkff_tb();
+|
+halstruct: *N,NUMDFF (./jkff_tb.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 1.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 4.
+halstruct: Total warnings = 6.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (9)
+  AWNDEL (1)      CMBPAU (1)      RTLINI (4)      UNCONI (3)     
+
+ Warnings : (27)
+  ATLGLC (1)      BADSYS (2)      CBYNAM (1)      CLKNPI (1)     
+  COMBLP (1)      DIFFMN (1)      EVTRIG (1)      FFWASR (1)     
+  IGNDLY (1)      INIUSP (5)      MULTMF (1)      NBGEND (3)     
+  NEEDIO (1)      NEGCLK (1)      NOBLKN (1)      RDBFAS (1)     
+  SEPLIN (2)      UNCONO (2)     
+
+ Notes    : (5)
+  CLKINF (1)      DECLIN (1)      IDLENG (1)      NUMDFF (1)     
+  PRTCNT (1)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld15/241/jkff/cds.lib -sortby severity -sortby category -sortby tag hal.log
+
