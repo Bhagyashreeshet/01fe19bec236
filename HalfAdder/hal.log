@@ -1,0 +1,200 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld15/241/half_adder/cds.lib -logfile hal.log worklib.half_adder_tb:module.
+hal: Snapshot:  worklib.half_adder_tb:module.
+hal: Workspace: /home/adld15/241/half_adder.
+hal: Date: Mon Apr 04 17:11:47 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module half_adder_tb();
+|
+halcheck: *W,NEEDIO (./half_adder_tb.v,1|0): Top-level module 'half_adder_tb' has no inputs/outputs/inouts.
+initial begin
+|
+halcheck: *W,NOBLKN (./half_adder_tb.v,5|0): Each block should be labeled with a meaningful name.
+$monitor("a=%b b=%b sum=%b carry=%b",a,b,sum,carry);
+|
+halcheck: *W,BADSYS (./half_adder_tb.v,6|0): System task $monitor in module 'half_adder_tb' is ignored.
+a=0;
+|
+halcheck: *W,IMPDTC (./half_adder_tb.v,7|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit half_adder_tb.
+a=0;
+|
+halcheck: *W,INTTOB (./half_adder_tb.v,7|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit half_adder_tb.
+a=0;
+|
+halcheck: *W,TRUNCZ (./half_adder_tb.v,7|0): Truncation in constant conversion without a loss of bits in module/design-unit half_adder_tb.
+b=0;
+|
+halcheck: *W,IMPDTC (./half_adder_tb.v,8|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit half_adder_tb.
+b=0;
+|
+halcheck: *W,INTTOB (./half_adder_tb.v,8|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit half_adder_tb.
+b=0;
+|
+halcheck: *W,TRUNCZ (./half_adder_tb.v,8|0): Truncation in constant conversion without a loss of bits in module/design-unit half_adder_tb.
+#10;
+|
+halcheck: *W,EMPSTM (./half_adder_tb.v,9|0): Module 'half_adder_tb' contains an empty statement.
+a=0;
+|
+halcheck: *W,IMPDTC (./half_adder_tb.v,10|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit half_adder_tb.
+a=0;
+|
+halcheck: *W,INTTOB (./half_adder_tb.v,10|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit half_adder_tb.
+a=0;
+|
+halcheck: *W,TRUNCZ (./half_adder_tb.v,10|0): Truncation in constant conversion without a loss of bits in module/design-unit half_adder_tb.
+b=1;
+|
+halcheck: *W,IMPDTC (./half_adder_tb.v,11|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit half_adder_tb.
+b=1;
+|
+halcheck: *W,INTTOB (./half_adder_tb.v,11|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit half_adder_tb.
+b=1;
+|
+halcheck: *W,TRUNCZ (./half_adder_tb.v,11|0): Truncation in constant conversion without a loss of bits in module/design-unit half_adder_tb.
+#10;
+|
+halcheck: *W,EMPSTM (./half_adder_tb.v,12|0): Module 'half_adder_tb' contains an empty statement.
+a=1;
+|
+halcheck: *W,IMPDTC (./half_adder_tb.v,13|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit half_adder_tb.
+a=1;
+|
+halcheck: *W,INTTOB (./half_adder_tb.v,13|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit half_adder_tb.
+a=1;
+|
+halcheck: *W,TRUNCZ (./half_adder_tb.v,13|0): Truncation in constant conversion without a loss of bits in module/design-unit half_adder_tb.
+b=0;
+|
+halcheck: *W,IMPDTC (./half_adder_tb.v,14|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit half_adder_tb.
+b=0;
+|
+halcheck: *W,INTTOB (./half_adder_tb.v,14|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit half_adder_tb.
+b=0;
+|
+halcheck: *W,TRUNCZ (./half_adder_tb.v,14|0): Truncation in constant conversion without a loss of bits in module/design-unit half_adder_tb.
+#10;
+|
+halcheck: *W,EMPSTM (./half_adder_tb.v,15|0): Module 'half_adder_tb' contains an empty statement.
+a=1;
+|
+halcheck: *W,IMPDTC (./half_adder_tb.v,16|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit half_adder_tb.
+a=1;
+|
+halcheck: *W,INTTOB (./half_adder_tb.v,16|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit half_adder_tb.
+a=1;
+|
+halcheck: *W,TRUNCZ (./half_adder_tb.v,16|0): Truncation in constant conversion without a loss of bits in module/design-unit half_adder_tb.
+b=1;
+|
+halcheck: *W,IMPDTC (./half_adder_tb.v,17|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit half_adder_tb.
+b=1;
+|
+halcheck: *W,INTTOB (./half_adder_tb.v,17|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit half_adder_tb.
+b=1;
+|
+halcheck: *W,TRUNCZ (./half_adder_tb.v,17|0): Truncation in constant conversion without a loss of bits in module/design-unit half_adder_tb.
+#10;
+|
+halcheck: *W,EMPSTM (./half_adder_tb.v,18|0): Module 'half_adder_tb' contains an empty statement.
+half_adder DUT(.a(a),.b(b),.sum(sum),.carry(carry));
+|
+halcheck: *W,LCVARN (./half_adder_tb.v,4|0): Module instance name 'DUT' uses uppercase characters.
+half_adder DUT(.a(a),.b(b),.sum(sum),.carry(carry));
+|
+halcheck: *N,IDLENG (./half_adder_tb.v,4|0): Identifier name 'DUT' is not of appropriate length (4 to 16 characters).
+module half_adder(a,b,sum,carry);
+|
+halcheck: *W,DIFFMN (./half_adder_tb.v,23|0): Module name 'half_adder' differs from file name 'half_adder_tb.v'.
+module half_adder(a,b,sum,carry);
+|
+halcheck: *W,MULTMF (./half_adder_tb.v,23|0): More than one design-unit definition in file 'half_adder_tb.v'.
+module half_adder(a,b,sum,carry);
+|
+halcheck: *N,PRTCNT (./half_adder_tb.v,23|0): Module/Entity 'half_adder' contains '4' ports.
+halcheck: (./half_adder_tb.v,23): Number of Input ports: 2.
+halcheck: (./half_adder_tb.v,23): Number of Output ports: 2.
+input a,b;
+|
+halcheck: *N,DECLIN (./half_adder_tb.v,24|0): Use a separate line for each HDL declaration.
+output sum,carry;
+|
+halcheck: *N,DECLIN (./half_adder_tb.v,25|0): Use a separate line for each HDL declaration.
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 34.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+initial begin
+|
+halsynth: *W,INIUSP (./half_adder_tb.v,5|0): Module half_adder_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 1.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+half_adder DUT(.a(a),.b(b),.sum(sum),.carry(carry));
+|
+halstruct: *E,UNCONI (./half_adder_tb.v,4|0): Input port 'a' of entity/module 'half_adder' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'half_adder_tb.DUT'.
+halstruct: (./half_adder_tb.v,4): 'a' mapped to actual expression 'a' which is undriven.
+half_adder DUT(.a(a),.b(b),.sum(sum),.carry(carry));
+|
+halstruct: *E,UNCONI (./half_adder_tb.v,4|0): Input port 'b' of entity/module 'half_adder' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'half_adder_tb.DUT'.
+halstruct: (./half_adder_tb.v,4): 'b' mapped to actual expression 'b' which is undriven.
+half_adder DUT(.a(a),.b(b),.sum(sum),.carry(carry));
+|
+halstruct: *W,UNCONO (./half_adder_tb.v,4|0): Port 'sum' (which is being used as an output) of entity/module 'half_adder' is being driven inside the design, but not connected (either partially or completely) in its instance 'half_adder_tb.DUT'.
+half_adder DUT(.a(a),.b(b),.sum(sum),.carry(carry));
+|
+halstruct: *W,UNCONO (./half_adder_tb.v,4|0): Port 'carry' (which is being used as an output) of entity/module 'half_adder' is being driven inside the design, but not connected (either partially or completely) in its instance 'half_adder_tb.DUT'.
+assign sum=a^b;
+|
+halstruct: *W,SYNPRT (./half_adder_tb.v,26|0): Output port 'sum' is assigned asynchronously.
+assign carry=a&b;
+|
+halstruct: *W,SYNPRT (./half_adder_tb.v,27|0): Output port 'carry' is assigned asynchronously.
+module half_adder_tb();
+|
+halstruct: *N,NUMDFF (./half_adder_tb.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 0.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 2.
+halstruct: Total warnings = 4.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (2)
+  UNCONI (2)     
+
+ Warnings : (39)
+  BADSYS (1)      DIFFMN (1)      EMPSTM (4)      IMPDTC (8)     
+  INIUSP (1)      INTTOB (8)      LCVARN (1)      MULTMF (1)     
+  NEEDIO (1)      NOBLKN (1)      SYNPRT (2)      TRUNCZ (8)     
+  UNCONO (2)     
+
+ Notes    : (5)
+  DECLIN (2)      IDLENG (1)      NUMDFF (1)      PRTCNT (1)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld15/241/half_adder/cds.lib -sortby severity -sortby category -sortby tag hal.log
+

@@ -1,0 +1,339 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld15/241/full_adder/cds.lib -logfile hal.log worklib.full_adder_tb:module.
+hal: Snapshot:  worklib.full_adder_tb:module.
+hal: Workspace: /home/adld15/241/full_adder.
+hal: Date: Mon Apr 04 17:10:06 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module full_adder_tb();
+|
+halcheck: *W,NEEDIO (./full_adder_tb.v,1|0): Top-level module 'full_adder_tb' has no inputs/outputs/inouts.
+initial begin
+|
+halcheck: *W,NOBLKN (./full_adder_tb.v,5|0): Each block should be labeled with a meaningful name.
+$monitor("a=%c b=%c c=%c sum=%c carry=%c",a,b,c,sum,carry);
+|
+halcheck: *W,BADSYS (./full_adder_tb.v,6|0): System task $monitor in module 'full_adder_tb' is ignored.
+a = 0;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,7|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,7|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,7|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,8|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,8|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,8|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,9|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,9|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,9|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,11|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,11|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,11|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,12|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,12|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,12|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,13|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,13|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,13|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,15|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,15|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,15|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,16|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,16|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,16|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,17|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,17|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,17|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,19|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,19|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+a = 0;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,19|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,20|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,20|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,20|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,21|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,21|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,21|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,23|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,23|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,23|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,24|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,24|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,24|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,25|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,25|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,25|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,27|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,27|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,27|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,28|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,28|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+b = 0; 
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,28|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,29|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,29|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,29|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,31|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,31|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,31|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,32|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,32|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,32|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,33|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,33|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+c = 0;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,33|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,35|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,35|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+a = 1;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,35|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,36|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,36|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+b = 1; 
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,36|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,IMPDTC (./full_adder_tb.v,37|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,INTTOB (./full_adder_tb.v,37|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit full_adder_tb.
+c = 1;
+|
+halcheck: *W,TRUNCZ (./full_adder_tb.v,37|0): Truncation in constant conversion without a loss of bits in module/design-unit full_adder_tb.
+#10;
+|
+halcheck: *W,EMPSTM (./full_adder_tb.v,38|0): Module 'full_adder_tb' contains an empty statement.
+full_adder DUT( .a(a), .b(b) , .c(c), .sum(sum), .carry(carry));
+|
+halcheck: *W,LCVARN (./full_adder_tb.v,4|0): Module instance name 'DUT' uses uppercase characters.
+full_adder DUT( .a(a), .b(b) , .c(c), .sum(sum), .carry(carry));
+|
+halcheck: *N,IDLENG (./full_adder_tb.v,4|0): Identifier name 'DUT' is not of appropriate length (4 to 16 characters).
+module full_adder(a,b,c,sum,carry);
+|
+halcheck: *W,DIFFMN (./full_adder_tb.v,44|0): Module name 'full_adder' differs from file name 'full_adder_tb.v'.
+module full_adder(a,b,c,sum,carry);
+|
+halcheck: *W,MULTMF (./full_adder_tb.v,44|0): More than one design-unit definition in file 'full_adder_tb.v'.
+module full_adder(a,b,c,sum,carry);
+|
+halcheck: *N,PRTCNT (./full_adder_tb.v,44|0): Module/Entity 'full_adder' contains '5' ports.
+halcheck: (./full_adder_tb.v,44): Number of Input ports: 3.
+halcheck: (./full_adder_tb.v,44): Number of Output ports: 2.
+input a,b,c;
+|
+halcheck: *N,DECLIN (./full_adder_tb.v,45|0): Use a separate line for each HDL declaration.
+output sum,carry;
+|
+halcheck: *N,DECLIN (./full_adder_tb.v,46|0): Use a separate line for each HDL declaration.
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 79.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+initial begin
+|
+halsynth: *W,INIUSP (./full_adder_tb.v,5|0): Module full_adder_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 1.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+full_adder DUT( .a(a), .b(b) , .c(c), .sum(sum), .carry(carry));
+|
+halstruct: *E,UNCONI (./full_adder_tb.v,4|0): Input port 'a' of entity/module 'full_adder' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'full_adder_tb.DUT'.
+halstruct: (./full_adder_tb.v,4): 'a' mapped to actual expression 'a' which is undriven.
+full_adder DUT( .a(a), .b(b) , .c(c), .sum(sum), .carry(carry));
+|
+halstruct: *E,UNCONI (./full_adder_tb.v,4|0): Input port 'b' of entity/module 'full_adder' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'full_adder_tb.DUT'.
+halstruct: (./full_adder_tb.v,4): 'b' mapped to actual expression 'b' which is undriven.
+full_adder DUT( .a(a), .b(b) , .c(c), .sum(sum), .carry(carry));
+|
+halstruct: *E,UNCONI (./full_adder_tb.v,4|0): Input port 'c' of entity/module 'full_adder' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'full_adder_tb.DUT'.
+halstruct: (./full_adder_tb.v,4): 'c' mapped to actual expression 'c' which is undriven.
+full_adder DUT( .a(a), .b(b) , .c(c), .sum(sum), .carry(carry));
+|
+halstruct: *W,UNCONO (./full_adder_tb.v,4|0): Port 'sum' (which is being used as an output) of entity/module 'full_adder' is being driven inside the design, but not connected (either partially or completely) in its instance 'full_adder_tb.DUT'.
+full_adder DUT( .a(a), .b(b) , .c(c), .sum(sum), .carry(carry));
+|
+halstruct: *W,UNCONO (./full_adder_tb.v,4|0): Port 'carry' (which is being used as an output) of entity/module 'full_adder' is being driven inside the design, but not connected (either partially or completely) in its instance 'full_adder_tb.DUT'.
+assign sum = a^b^c;
+|
+halstruct: *W,SYNPRT (./full_adder_tb.v,47|0): Output port 'sum' is assigned asynchronously.
+assign carry = (a&b)|(b&c)|(c&a);
+|
+halstruct: *W,SYNPRT (./full_adder_tb.v,48|0): Output port 'carry' is assigned asynchronously.
+module full_adder_tb();
+|
+halstruct: *N,NUMDFF (./full_adder_tb.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 0.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 3.
+halstruct: Total warnings = 4.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (3)
+  UNCONI (3)     
+
+ Warnings : (84)
+  BADSYS (1)      DIFFMN (1)      EMPSTM (1)      IMPDTC (24)    
+  INIUSP (1)      INTTOB (24)     LCVARN (1)      MULTMF (1)     
+  NEEDIO (1)      NOBLKN (1)      SYNPRT (2)      TRUNCZ (24)    
+  UNCONO (2)     
+
+ Notes    : (5)
+  DECLIN (2)      IDLENG (1)      NUMDFF (1)      PRTCNT (1)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld15/241/full_adder/cds.lib -sortby severity -sortby category -sortby tag hal.log
+
